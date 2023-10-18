@@ -1,1 +1,2 @@
 # Informatyka_Praca
+Serhii106
