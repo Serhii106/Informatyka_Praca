@@ -10,16 +10,31 @@ int main()
    cin >> wysokosc;
    
    //Wprowadż szerokość 
-   cout << "Podaj szerokosz: ";
+   cout << "Podaj szerokosc: ";
    cin >> szerokosc;
    
    //Rysowanie prostokąta
    for (int i = 0; i < wysokosc; i++)
    {
    	for (int j = 0; j < szerokosc; j++) {
-	   	cout << "* ";
+	   	
+	   
+	   if (i == 0 || i == wysokosc-1){
+	   	cout  << "*";
 	   }
+	   else {
+	   	cout  << " ";
+	   }
+	   if (j == 0 || j == szerokosc-1){
+	   	cout  << "*";
+	   }
+	   else {
+	   	cout  << " ";
+	   }
+}
+	   
 	   cout << endl;
       }
       return 0;
    }
+   
