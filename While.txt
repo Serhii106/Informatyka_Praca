@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+     //while(warunek-konczacy)
+     short a = 30;
+     while(a > 0){
+     	cout << a << ", ";
+     	a -= 1;
+	 }
+     
+     // do...while 
+     short liczba;
+     do{
+     	cout << "Podaj liczbe:";
+     	cin >> liczba;
+	 }while(liczba != 5);
+     
+      cout << endl;
+      system("pause");
+   }
+   
