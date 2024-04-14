@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Funkcja realizująca wyszukiwanie liniowe
+vector<int> linearSearch(int szukana, const vector<int>& tab) {
+    vector<int> numery;
+
+    // Iteracja przez elementy tablicy
+    for (int i = 0; i < tab.size(); ++i) {
+        // Jeśli element tablicy jest równy poszukiwanej liczbie
+        if (tab[i] == szukana) {
+            // Zapisujemy indeks tego elementu
+            numery.push_back(i);
+        }
+    }
+
+    return numery;
+}
+
+int main() {
+    vector<int> tablica = {2, 3, 5, 7, 11, 2, 3, 5, 7, 11, 31, 37, 41, 43, 47, 2, 3, 5, 7, 11, 31, 37, 41, 43, 47};
+    int szukana;
+
+    cout << "Jaka liczbe poszukujesz: ";
+    cin >> szukana;
+
+    // Wywołanie funkcji wyszukiwania liniowego
+    vector<int> pozycje = linearSearch(szukana, tablica);
+
+    // Wyświetlenie pozycji znalezionych liczb
+    cout << "Poszukiwana liczba znajduje sie na pozycji: ";
+    for (int i = 0; i < pozycje.size(); ++i) {
+        cout << pozycje[i];
+        if (i != pozycje.size() - 1) {
+            cout << ", ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
