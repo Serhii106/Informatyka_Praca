@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath> 
+
+using namespace std;
+
+
+bool czyPierwsza(int n) {
+    if (n < 2) 
+        return false;
+
+    // sprawdzamy dzielniki od 2 do sqrt(n)
+    for (int d = 2; d <= sqrt(n); d++) {
+        if (n % d == 0) 
+            return false;
+    }
+
+    return true; 
+}
+
+int main() {
+    int n;
+
+    cout << "Podaj liczbe: ";
+    cin >> n;
+
+    if (czyPierwsza(n))
+        cout << n << " jest liczba pierwsza." << endl;
+    else
+        cout << n << " nie jest liczba pierwsza." << endl;
+
+    return 0;
+}
