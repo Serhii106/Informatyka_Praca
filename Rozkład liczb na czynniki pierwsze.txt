@@ -1,0 +1,23 @@
+#include <iostream>
+
+void rozkladNaCzynniki(int n) {
+    int k = 2;
+    while (n > 1) {
+        while (n % k == 0) {
+            std::cout << k << " ";
+            n /= k;
+        }
+        k++;
+    }
+}
+
+int main() {
+    int n;
+    std::cout << "Podaj liczbe: ";
+    std::cin >> n;
+
+    std::cout << "Czynniki pierwsze: ";
+    rozkladNaCzynniki(n);
+
+    return 0;
+}
